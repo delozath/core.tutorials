@@ -123,9 +123,11 @@ class SyllabusLatexUAM(SyllabusPublisherPort):
         self._preamble()
         self._presentacion()
         self._generalidades()
+        self._inputs('objetivos')
         self._sesiones()
         self._temario()
-        self._nota()
+        self._inputs('consideraciones')
+        self._inputs('evaluacion')
         self._referencias()
         self.syllabus = self.doc.dumps()
         return self
@@ -193,35 +195,9 @@ rf"""
         self.doc.append(Section("Temario"))
         self.doc.append(NoEscape(self.temario))
     
-    def _nota(self) -> None:
-        self.doc.append(Subsection("Calificación y asignación de nota de la UEA", numbering=False))
+    def _inputs(self, finput: str) -> None:
         self.doc.append(NoEscape(
-        r"""
-La calificación final $C$ se calculará de la siguiente forma:
-\begin{align}
- C &= \begin{bmatrix}
-         0.1 \\
-         0.1 \\
-         3.0 \\
-         0.25 \\
-         0.25 \\
-       \end{bmatrix}
-    \begin{bmatrix}
-         E_{1}& E_{2}& C_{A}& P_1& P_2
-     \end{bmatrix}.
-\end{align}
-
-La asignación de nota se realizará de la siguiente forma:
-\begin{center}
-	\begin{tabular}{rc}
-	 \bf Nota en el acta  & \bf Calificación\\
-	 MB& [8.6, 10.0]\\
-	 B & [7.6, 8.6)\\
-	 S & [6.0, 7.6)\\
-	 NA& [0.0, 6.0)\\
-	\end{tabular}
-\end{center}
-        """
+            rf"\input{{syllabus/{finput}.tex}}"
         ))
 
     def _referencias(self) -> None:
