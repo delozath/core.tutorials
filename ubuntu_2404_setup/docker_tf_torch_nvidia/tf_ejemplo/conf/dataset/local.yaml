@@ -1,0 +1,5 @@
+name: local_dataset
+train_path: ./train
+test_path: ./test
+models_path: ./models
+mlruns_path: ./mlruns

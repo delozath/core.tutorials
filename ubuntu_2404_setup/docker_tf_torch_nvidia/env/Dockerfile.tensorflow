@@ -1,0 +1,32 @@
+FROM nvcr.io/nvidia/tensorflow:24.10-tf2-py3
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    TF_CPP_MIN_LOG_LEVEL=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /workspace
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    curl \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# La imagen base ya incluye TensorFlow optimizado por NVIDIA; reinstalarlo puede romper CUDA/cuDNN/NCCL.
+RUN python -m pip install --upgrade pip setuptools wheel \
+    && python -m pip install \
+    "numpy<2.0.0" \
+    "protobuf>=3.20.3,<5.0.0" \
+    "mlflow<3" \
+    hydra-core \
+    omegaconf \
+    scikit-learn \
+    pandas \
+    matplotlib \
+    pytest \
+    && python -m pip check
+
+CMD ["/bin/bash"]
+
+CMD ["tail", "-f", "/dev/null"]

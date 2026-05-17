@@ -1,0 +1,10 @@
+defaults:
+  - model: default
+  - dataset: local
+  - _self_
+
+project_name: ejemplo_tf
+seed: 42
+epochs: 10
+batch_size: 128
+mixed_precision: true
