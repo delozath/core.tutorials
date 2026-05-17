@@ -1,0 +1,41 @@
+FROM nvidia/cuda:12.1.1-devel-ubuntu22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3.10 \
+    python3.10-dev \
+    python3-pip \
+    python3-venv \
+    git \
+    curl \
+    build-essential \
+    && ln -sf /usr/bin/python3.10 /usr/bin/python \
+    && python -m pip install --upgrade pip setuptools wheel \
+    && rm -rf /var/lib/apt/lists/*
+
+# PyTorch cu121 requiere una imagen/runtime CUDA 12.1 compatible.
+RUN python -m pip install \
+    torch==2.5.1 \
+    torchvision==0.20.1 \
+    torchaudio==2.5.1 \
+    --index-url https://download.pytorch.org/whl/cu121
+
+RUN python -m pip install \
+    hydra-core \
+    mlflow \
+    scikit-learn \
+    pandas \
+    numpy \
+    scipy \
+    pytest \
+    pydantic \
+    loguru \
+    onnx \
+    optuna
+
+WORKDIR /workspace
+
+CMD ["tail", "-f", "/dev/null"]

@@ -1,8 +1,0 @@
-{% for evt, info in eventos.items() %}
-  \textbf{ {{- evt -}} }:
-  \begin{itemize}
-  {%- for ev in info %}
-    \item {{ ev.index -}}, semana {{ ev.semana_uam }}
-  {%- endfor %}
-  \end{itemize}
-{% endfor %}

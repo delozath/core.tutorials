@@ -1,0 +1,42 @@
+services:
+  tf_gpu:
+    build:
+      context: .
+      dockerfile: Dockerfile.tensorflow
+    image: tensorflow_gpu_dev:latest
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ${PWD}/conf:/workspace/conf
+      - ${PWD}/src:/workspace/src
+      - ${PWD}/tests:/workspace/tests
+      - ${PWD}/train:/workspace/train
+      - ${PWD}/test:/workspace/test
+      - ${PWD}/models:/workspace/models
+      - ${PWD}/mlruns:/workspace/mlruns
+    working_dir: /workspace
+    tty: true
+    stdin_open: true
+    command: tail -f /dev/null
+
+  torch_gpu:
+    build:
+      context: .
+      dockerfile: Dockerfile.pytorch
+    image: pytorch_gpu_dev:latest
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ${PWD}/conf:/workspace/conf
+      - ${PWD}/src:/workspace/src
+      - ${PWD}/tests:/workspace/tests
+      - ${PWD}/train:/workspace/train
+      - ${PWD}/test:/workspace/test
+      - ${PWD}/models:/workspace/models
+      - ${PWD}/mlruns:/workspace/mlruns
+    working_dir: /workspace
+    tty: true
+    stdin_open: true
+    command: tail -f /dev/null
