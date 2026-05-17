@@ -439,60 +439,7 @@ sudo apt install -y \
   ttf-mscorefonts-installer
 
 # ==============================================================================
-# 17. Virtualización opcional
-# Se deja fuera de la base porque depende mucho del hardware y del uso real.
-# ==============================================================================
-
-# sudo apt install -y \
-#   qemu-kvm \
-#   libvirt-daemon-system \
-#   libvirt-clients \
-#   bridge-utils \
-#   virt-manager
-#
-# sudo usermod -aG libvirt "$USER"
-# sudo usermod -aG kvm "$USER"
-
-# VirtualBox desde repositorio de Ubuntu, si prefieres ese camino:
-# sudo apt install -y virtualbox
-
-# ==============================================================================
-# 18. Flatpak
-# Opcional para apps de escritorio que a veces llegan más cuidadas por Flathub.
-# ==============================================================================
-
-# sudo apt install -y flatpak gnome-software-plugin-flatpak
-# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-#
-# flatpak install -y flathub com.spotify.Client
-# flatpak install -y flathub com.discordapp.Discord
-# flatpak install -y flathub com.slack.Slack
-# flatpak install -y flathub us.zoom.Zoom
-# flatpak install -y flathub org.shotcut.Shotcut
-# flatpak install -y flathub com.github.tchx84.Flatseal
-# flatpak install -y flathub org.onlyoffice.desktopeditors
-# flatpak install -y flathub md.obsidian.Obsidian
-# flatpak install -y flathub com.github.johnfactotum.Foliate
-
-# ==============================================================================
-# 19. Snap
-# Alternativa rápida para algunas apps cuando conviene usar el paquete oficial.
-# ==============================================================================
-
-# sudo snap install spotify
-# sudo snap install discord
-# sudo snap install slack
-# sudo snap install code --classic
-# sudo snap install pycharm-community --classic
-# sudo snap install intellij-idea-community --classic
-# sudo snap install geogebra
-# sudo snap install zoom-client
-# sudo snap install obsidian --classic
-# sudo snap install postman
-# sudo snap install android-studio --classic
-
-# ==============================================================================
-# 20. Limpieza
+# 17. Limpieza
 # Retira dependencias sobrantes y limpia caché al final.
 # ==============================================================================
 

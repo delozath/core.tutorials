@@ -1,0 +1,221 @@
+# ---------------------------------------------------------------------
+# Core scientific stack
+# ---------------------------------------------------------------------
+numpy
+scipy
+pandas
+polars
+pyarrow
+duckdb
+dask
+joblib
+tqdm
+
+# ---------------------------------------------------------------------
+# Machine learning clásico
+# ---------------------------------------------------------------------
+scikit-learn
+imbalanced-learn
+xgboost
+lightgbm
+catboost
+eli5
+shap
+lime
+dalex
+interpret
+yellowbrick
+optuna
+scikit-optimize
+
+# ---------------------------------------------------------------------
+# Estadística / probabilístico
+# ---------------------------------------------------------------------
+statsmodels
+pingouin
+sympy
+statannotations
+prince
+formulaic
+patsy
+
+# ---------------------------------------------------------------------
+# Experimentos, configuración y reproducibilidad
+# ---------------------------------------------------------------------
+mlflow
+hydra-core
+omegaconf
+python-dotenv
+pydantic
+rich
+typer
+loguru
+
+# ---------------------------------------------------------------------
+# Señales biomédicas / neuro / fisiología
+# ---------------------------------------------------------------------
+wfdb
+mne
+bioread
+neurokit2
+PyWavelets
+spectrum
+antropy
+tsfresh
+sktime
+ruptures
+
+# ---------------------------------------------------------------------
+# Imágenes / visión / medical imaging
+# ---------------------------------------------------------------------
+scikit-image
+opencv-python
+vtk
+itk
+SimpleITK
+nibabel
+pydicom
+monai
+dicom2nifti
+nilearn
+antspyx
+
+# ---------------------------------------------------------------------
+# Visualización
+# ---------------------------------------------------------------------
+matplotlib
+seaborn
+plotly
+altair
+bokeh
+panel
+streamlit
+ipympl
+ipywidgets
+chart_studio
+cufflinks
+
+# ---------------------------------------------------------------------
+# Geoespacial
+# ---------------------------------------------------------------------
+geopandas
+shapely
+pyproj
+rasterio
+folium
+contextily
+
+# ---------------------------------------------------------------------
+# Jupyter / docencia / notebooks
+# ---------------------------------------------------------------------
+jupyter
+jupyterlab
+notebook
+ipykernel
+jupytext
+nbconvert
+nbstripout
+
+# ---------------------------------------------------------------------
+# Archivos científicos / tabulares
+# ---------------------------------------------------------------------
+h5py
+tables
+zarr
+pyreadstat
+xlrd
+odfpy
+openpyxl
+xlsxwriter
+pandera
+great_expectations
+great-tables
+tabulate
+anjana
+
+# ---------------------------------------------------------------------
+# Documentos / PDFs / Word / referencias
+# ---------------------------------------------------------------------
+pypdf
+pymupdf
+pdfplumber
+python-docx
+bibtexparser
+reportlab
+
+# ---------------------------------------------------------------------
+# Bases de datos
+# ---------------------------------------------------------------------
+sqlalchemy
+mysql-connector-python
+pymysql
+
+# ---------------------------------------------------------------------
+# Automatización / scraping / web
+# ---------------------------------------------------------------------
+selenium
+webdriver-manager
+requests
+httpx
+beautifulsoup4
+lxml
+
+# ---------------------------------------------------------------------
+# Calidad de código
+# ---------------------------------------------------------------------
+ruff
+black
+isort
+mypy
+pytest
+pytest-cov
+pre-commit
+python-lsp-server[all]
+
+# ---------------------------------------------------------------------
+# Utilidades
+# ---------------------------------------------------------------------
+pyperclip
+multipledispatch
+frozendict
+platformdirs
+tomlkit
+Jinja2
+pylatex
+
+# ---------------------------------------------------------------------
+# Dispositivos
+# ---------------------------------------------------------------------
+bleak
+
+# ---------------------------------------------------------------------
+# Animación / multimedia
+# ---------------------------------------------------------------------
+manim
+
+# ---------------------------------------------------------------------
+# Estadística bayesiana
+# ---------------------------------------------------------------------
+pymc
+pytensor
+arviz
+bambi
+nutpie
+cmdstanpy
+xarray
+
+# ---------------------------------------------------------------------
+# Ecuaciones estructurales y modelos jerárquicos
+# ---------------------------------------------------------------------
+semopy
+graphviz
+networkx
+factor-analyzer
+scikit-posthocs
+reliability
+
+# ---------------------------------------------------------------------
+# Visualización avanzada
+# ---------------------------------------------------------------------
+forestplot
+plotnine
