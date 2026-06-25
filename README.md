@@ -43,3 +43,21 @@ Este bloque del repositorio organiza el proceso en una secuencia corta de tutori
 - Instalar Docker: [ollama_local/install_config_docker.md](./ollama_local/install_config_docker.md)
 - NVIDIA Container Toolkit: [ollama_local/install_nvidia_container_toolkit.md](./ollama_local/install_nvidia_container_toolkit.md)
 - Configurar Ollama con Docker: [ollama_local/setup_ollama_docker.md](./ollama_local/setup_ollama_docker.md)
+
+
+## 📡 MQTT en red local con Ubuntu y ESP32 `setup_mqtt_pc_esp32`
+
+`setup_mqtt_pc_esp32` documenta el montaje de una red local para comunicación MQTT entre una computadora Ubuntu y dispositivos externos, con Mosquitto como broker y clientes de prueba conectados por Ethernet o Wi-Fi. La intención es dejar una práctica reproducible para laboratorio, donde la computadora funciona como servidor MQTT y otros equipos, como una ESP32, pueden publicar y suscribirse a mensajes dentro de la misma red.
+
+El tutorial cubre la configuración del gateway o router, la asignación de una IP fija para el broker, la instalación y apertura de Mosquitto hacia la red local, pruebas básicas de publicación/suscripción y ejemplos mínimos para validar comunicación desde una ESP32. También incluye notas de diagnóstico, buenas prácticas de seguridad y anexos para revisar conceptos de red, conexión física y firewall en Ubuntu.
+
+🔗 Referencias:
+
+- Proyecto: [setup_mqtt_pc_esp32/](./setup_mqtt_pc_esp32/)
+- README: [setup_mqtt_pc_esp32/README.md](./setup_mqtt_pc_esp32/README.md)
+- Ejemplo ESP32 hello world MQTT: [setup_mqtt_pc_esp32/esp32_hola_mundo.py](./setup_mqtt_pc_esp32/esp32_hola_mundo.py)
+- Ejemplo ESP32 control de LED por MQTT: [setup_mqtt_pc_esp32/esp32_control_led.py](./setup_mqtt_pc_esp32/esp32_control_led.py)
+- Anexo A: [qué es una dirección IP y por qué se utiliza](./setup_mqtt_pc_esp32/README.md#16-anexo-a-qué-es-una-dirección-ip-y-por-qué-se-utiliza)
+- Anexo B: [minitutorial para ponchar un cable Ethernet](./setup_mqtt_pc_esp32/README.md#17-anexo-b-minitutorial-para-ponchar-un-cable-ethernet)
+- Anexo C: [probar una conexión entre dos computadoras](./setup_mqtt_pc_esp32/README.md#18-anexo-c-probar-una-conexión-entre-dos-computadoras)
+- Anexo D: [seguridad MQTT y firewall en Ubuntu](./setup_mqtt_pc_esp32/README.md#19-anexo-d-seguridad-mqtt-y-firewall-en-ubuntu)
